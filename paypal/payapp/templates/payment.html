@@ -1,0 +1,10 @@
+
+<h2>Make a Payment</h2>
+<form method="POST" action="{% url 'initiate_payment' %}">
+    {% csrf_token %}
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" required>
+    <label for="currency">Currency:</label>
+    <input type="text" id="currency" name="currency" required>
+    <button type="submit">Pay with PayPal</button>
+</form>
